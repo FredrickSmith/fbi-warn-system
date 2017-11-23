@@ -11,3 +11,4 @@ Added 3 Warns until kick
 
 ## Future Updates
 1. Warn GUI
+2. In-Game change config
