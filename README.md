@@ -16,7 +16,8 @@ Commands:
 !resetwarns <playername>
 !warns - opens GUI
 
-If you need help, either make a support ticket or add on steam I accept all friend request.
+If you need help, either make a issue or add on steam I accept all friend request. 
+http://steamcommunity.com/id/ActuallyFBI/
 
 Installation:
 
