@@ -23,7 +23,9 @@ hook.Add("PlayerInitialSpawn", "InitializePlayerData", InitializePlayerData)
 local function SaveDisconnectedPlayerData(ply)
 			
 	// Update the player's warn PData
-			
+		
+	if not IsValid(ply) then return end // Something went wrong
+	
     ply:SetPData("Warnings", ply:GetNWInt("Warnings"))
 end
 hook.Add("PlayerDisconnected", "SaveDisconnectedPlayerData", SaveDisconnectedPlayerData)
