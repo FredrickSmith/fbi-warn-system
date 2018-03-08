@@ -8,7 +8,7 @@ end
 
 function ply:AddWarn()
     
-    self:SetNWInt("Warnings", self:GetNWInt("Warnings") + 1) // Add warn before we check or we will have 1 less warning.
+    self:SetNWInt("Warnings", self:GetNWInt("Warnings") + 1) -- Add warn before we check or we will have 1 less warning.
     
     hook.Call("PlayerWarnsUpdated", GAMEMODE, self)
     
