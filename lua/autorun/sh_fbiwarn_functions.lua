@@ -7,10 +7,17 @@ function ply:SetWarns(amount)
 end
 
 function ply:AddWarn()
+    
+    self:SetNWInt("Warnings", self:GetNWInt("Warnings") + 1) // Add warn before we check or we will have 1 less warning.
+    
+    hook.Call("PlayerWarnsUpdated", GAMEMODE, self)
+    
     if (self:GetWarns() == FBIWarn.MaxWarns or self:GetWarns() == FBIWarn.MaxWarns *2) then 
-        self:Kick("You've reached the warn limit!")
+        
+        timer.Simple(0.1, function() if IsValid(self) then self:Kick("You've reached the warn limit!") end end)
+        
     end
-    self:SetNWInt("Warnings", self:GetNWInt("Warnings") + 1)
+
 end
 
 function ply:GetWarns()
