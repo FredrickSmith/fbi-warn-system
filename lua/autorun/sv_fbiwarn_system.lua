@@ -1,4 +1,4 @@
-localfunction InitializePlayerData(ply)
+local function InitializePlayerData(ply)
 	
 	-- Check if the PData doesn't exist
 		
